@@ -35,7 +35,7 @@ plymouth-set-default-theme manjaro
 systemctl --global enable audiosystem-passthrough
 
 # Disable this service, so it only gets run on first boot
-systemctl disable xiaomi-onclite-adaptation.service
+systemctl disable xiaomi-lavender-adaptation.service
 
 # Start phosh
 [[ -e /usr/bin/phosh ]] && systemctl start phosh
