@@ -30,7 +30,7 @@ package() {
 
     mkdir -p "${pkgdir}/etc/udev/rules.d/"
     cp -r "${srcdir}/xiaomi-lavender-adaptation/70-lavender.rules" -t "${pkgdir}/etc/udev/rules.d/"
-    cp -r "${srcdir}/xiaomi-lavender-adaptation/90-backlight.rules" -t "${pkgdir}/etc/udev/rules.d/"
+    cp -r "${srcdir}/xiaomi-lavender-adaptation/90-backlght.rules" -t "${pkgdir}/etc/udev/rules.d/"
 
     mkdir -p "${pkgdir}/boot/"
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/boot.img" -t "${pkgdir}/boot/"
