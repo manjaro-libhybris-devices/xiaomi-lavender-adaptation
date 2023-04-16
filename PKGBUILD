@@ -20,8 +20,10 @@ package() {
 
     mkdir -p "${pkgdir}/usr/bin/"
     install -Dm755 "${srcdir}/xiaomi-lavender-adaptation/xiaomi-lavender-adaptation" -t "${pkgdir}/usr/bin/"
+
     mkdir -p "${pkgdir}/usr/lib/systemd/system/"
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/xiaomi-lavender-adaptation.service" -t "${pkgdir}/usr/lib/systemd/system/"
+
     mkdir -p "${pkgdir}/usr/lib/sysusers.d/"
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/android.conf" -t "${pkgdir}/usr/lib/sysusers.d/"
 
@@ -31,6 +33,9 @@ package() {
     mkdir -p "${pkgdir}/etc/udev/rules.d/"
     cp -r "${srcdir}/xiaomi-lavender-adaptation/70-lavender.rules" -t "${pkgdir}/etc/udev/rules.d/"
     cp -r "${srcdir}/xiaomi-lavender-adaptation/90-backlght.rules" -t "${pkgdir}/etc/udev/rules.d/"
+
+    mkdir -p "${pkgdir}/etc/systemd/system/bluebinder.service.d"
+    cp -r "${srcdir}/xiaomi-lavender-adaptation/override.conf" -t "${pkgdir}/etc/systemd/system/bluebinder.service.d/override.conf"
 
     mkdir -p "${pkgdir}/boot/"
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/boot.img" -t "${pkgdir}/boot/"
