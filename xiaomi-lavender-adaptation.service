@@ -1,0 +1,9 @@
+[Unit]
+Description=xiaomi lavender adaptation service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xiaomi-lavender-adaptation
+
+[Install]
+WantedBy=default.target
