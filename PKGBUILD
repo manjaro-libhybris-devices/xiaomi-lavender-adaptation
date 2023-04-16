@@ -31,11 +31,11 @@ package() {
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/phoc.ini" -t "${pkgdir}/etc/phosh/"
 
     mkdir -p "${pkgdir}/etc/udev/rules.d/"
-    cp -r "${srcdir}/xiaomi-lavender-adaptation/70-lavender.rules" -t "${pkgdir}/etc/udev/rules.d/"
-    cp -r "${srcdir}/xiaomi-lavender-adaptation/90-backlght.rules" -t "${pkgdir}/etc/udev/rules.d/"
+    install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/70-lavender.rules" -t "${pkgdir}/etc/udev/rules.d/"
+    install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/90-backlght.rules" -t "${pkgdir}/etc/udev/rules.d/"
 
     mkdir -p "${pkgdir}/etc/systemd/system/bluebinder.service.d"
-    cp -r "${srcdir}/xiaomi-lavender-adaptation/override.conf" -t "${pkgdir}/etc/systemd/system/bluebinder.service.d/override.conf"
+    install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/override.conf" -t "${pkgdir}/etc/systemd/system/bluebinder.service.d/"
 
     mkdir -p "${pkgdir}/boot/"
     install -Dm644 "${srcdir}/xiaomi-lavender-adaptation/boot.img" -t "${pkgdir}/boot/"
